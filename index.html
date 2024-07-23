@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Bank</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+
+    <div class="first-section">
+        <div class="top-text-container">
+            <p>Welcome To Your Favorite Research Bank</p>
+        </div>
+
+        <div class="add-button-container">
+            <button id="button" type="button">Add Research Item</button>
+        </div>
+    </div>
+
+
+    <div class="items-section">
+        <div class="research-item">
+            <div class="title-and-delete-container">
+                <a href="#">Website For NASA Data</a>
+                <i class="fa-solid fa-trash"></i>
+            </div>
+
+            <div class="description-of-item">
+                <p>This website is for researching on UX Design principles. I love the way the research is done on the website</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="close-icon-container">
+                <i class="fa-solid fa-x"></i>
+            </div>
+
+            <div class="modal-title-container">
+                <h3>Add Research Item</h3>
+            </div>
+
+            <div class="modal-form">
+                <form id="form">
+                    <div class="input-group">
+                        <label for="name-of-item">Name Of Item</label>
+                        <input type="text" name="name-of-item" id="name-of-item" placeholder="Data Analysis Website For Engineers">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="link-to-item">Link To Item</label>
+                        <input type="text" name="link-to-item" id="link-to-item" placeholder="e.g www.item.com">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="description-of-item">Decription Of Item</label>
+                        <textarea name="description-of-item" id="description-of-item" placeholder="Enter Description"></textarea>
+                    </div>
+
+                    <div class="form-button-container">
+                        <button type="submit" id="submitButton" class="form-button">Add Research Item</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="./index.js"></script>
+</body>
+</html>
