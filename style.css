@@ -203,6 +203,10 @@ textarea{
     padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
+textarea::placeholder{
+    font-size: 0.75rem;
+}
+
 .form-button-container{
     width: 100%;
     height: auto;
