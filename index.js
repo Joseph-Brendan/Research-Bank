@@ -59,8 +59,10 @@ function fetchItems(){
 fetchItems()
 
 
+
 // Print Data From Lstorage to UI
 function printItemsOnUI(){
+    itemsSection.innerHTML = ' '
     researchItems.forEach(function(item){
         let itemNameTOPRINT = item.itemNAME
         let itemLinkTOPRINT = item.itemLINK
@@ -79,7 +81,7 @@ function printItemsOnUI(){
 
         let deleteIcon = document.createElement("i")
         deleteIcon.classList.add("fa-solid", "fa-trash")
-        deleteIcon.setAttribute("onclick", `deleteItem()`)
+        deleteIcon.setAttribute(`onclick`, `deleteItem('${itemLinkTOPRINT}')`)
 
         let descriptionOfItemDiv = document.createElement("div")
         descriptionOfItemDiv.classList.add("description-of-item")
@@ -94,3 +96,16 @@ function printItemsOnUI(){
         itemsSection.append(researchItemDiv)
     })
 }
+
+function deleteItem(researchLink){
+    researchItems.forEach(function(item, index){
+        if(item.itemLinkTOPRINT === researchLink){
+            researchItems.splice(index)
+        }
+    })
+
+    localStorage.setItem("itemsOfResearch", JSON.stringify(researchItems))
+    fetchItems()
+}
+
+
