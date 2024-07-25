@@ -48,7 +48,6 @@ function handleFormData(event){
     fetchItems()
 }
 
-
 //Fetch data from local storage
 function fetchItems(){
     if(localStorage.getItem("itemsOfResearch")){
@@ -57,7 +56,6 @@ function fetchItems(){
     printItemsOnUI()
 }
 fetchItems()
-
 
 
 // Print Data From Lstorage to UI
@@ -97,15 +95,15 @@ function printItemsOnUI(){
     })
 }
 
+
+// Delete Items From Array
 function deleteItem(researchLink){
     researchItems.forEach(function(item, index){
-        if(item.itemLinkTOPRINT === researchLink){
-            researchItems.splice(index)
+        if(item.itemLINK === researchLink){
+            researchItems.splice(index, 1)
         }
     })
 
     localStorage.setItem("itemsOfResearch", JSON.stringify(researchItems))
     fetchItems()
 }
-
-
