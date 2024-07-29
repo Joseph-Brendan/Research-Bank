@@ -60,6 +60,11 @@ fetchItems()
 
 // Print Data From Lstorage to UI
 function printItemsOnUI(){
+    if(researchItems.length === 0){
+        itemsSection.style.display = "none"
+    }else{
+        itemsSection.style.display = "flex"
+    }
     itemsSection.innerHTML = ' '
     researchItems.forEach(function(item){
         let itemNameTOPRINT = item.itemNAME
